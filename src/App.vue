@@ -3,6 +3,7 @@ import q from "./data/data.json";
 import {ref, watch} from "vue";
 import Card from "./components/Card.vue";
 import {RouterView} from "vue-router";
+import Nav from "./components/Nav.vue";
 
 const quizes = ref(q);
 const search = ref("");
@@ -14,7 +15,10 @@ watch(search, () => {
 
 
 <template>
+  <Nav/>
   <RouterView/>
+
+
   <div class="container">
     <header>
       <h1>Quiz</h1>
@@ -25,6 +29,7 @@ watch(search, () => {
     <Card v-for="quiz in quizes" :key="quiz.id" :quiz="quiz"/>
 </div>
   </div>
+
 </template>
 
 <style scoped>
