@@ -1,9 +1,9 @@
 <template>
 <div>
-  <RouterLink to="/">
+  <RouterLink active-class="active" to="/">
     Home
   </RouterLink>
-  <RouterLink  to="/about">
+  <RouterLink active-class="active" to="/about">
     About
   </RouterLink>
 </div>
@@ -14,3 +14,11 @@ import {RouterLink} from "vue-router";
 
 
 </script>
+
+<style scoped>
+.active{
+  font-weight: 900;
+  color: blue;
+}
+
+</style>
